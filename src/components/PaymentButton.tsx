@@ -20,7 +20,7 @@ const StyledWrapper = styled.div`
 
 const StyledButtonText = styled.span`
   display: inline-block;
-  margin-left: 20px;
+  margin-right: 20px;
 `
 
 enum BtnState {
@@ -79,8 +79,8 @@ export default function PaymentButton({
   return (
     <TxButton onClick={pay} disabled={disabled || loading || approving} loading={loading || approving} {...btnProps}>
       <StyledWrapper>
-        {!noAmount && <Price showSymbol={showSymbol} token={token} amount={amount} />}
         {children && <StyledButtonText>{children}</StyledButtonText>}
+        {!noAmount && <Price showSymbol={showSymbol} token={token} amount={amount} />}
       </StyledWrapper>
     </TxButton>
   )

@@ -243,6 +243,7 @@ export default function ResultStep() {
                   token={MATIC}
                   amount={price || '0'}
                   onClick={() => otto && revive(otto.id, { value: price || '0', gasLimit: 2000000 })}
+                  showSymbol
                 >
                   {t('revive_btn')}
                 </PaymentButton>
